@@ -1,0 +1,39 @@
+function Person(first, last, age, eye) {
+  this.ismi = first;
+  this.sharifi = last;
+  this.yili = age;
+  this.about = function () {
+    return `my father is ${first}`;
+  };
+}
+let myfather = new Person("John", "Doe", 50, "blue");
+console.log(myfather.about());
+function Person(first, last, age) {
+  this.ismi = first;
+  this.sharifi = last;
+  this.yili = age;
+  this.about = function () {
+    return `kitob nomi ${this.ismi} muallifi ${this.sharifi} yozilgan yili ${}`;
+  };
+}
+let myfather = new Person(
+  "sariq devni minib",
+  "xudoyberdi toxtaboyev",
+  50,
+  "blue"
+);
+console.log(myfather.about());
+==================
+let target = 6;
+output = [3, 2, 4];
+count = "";
+for (i = 0; i < output.length; i++) {
+  //   console.log(output[i]);
+
+  for (j = i + 1; j < output.length; j++) {
+    if (output[i] + output[j] == target) {
+      count += i + j.toString();
+    }
+  }
+}
+console.log(count);
